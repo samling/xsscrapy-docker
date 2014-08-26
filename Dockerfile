@@ -1,5 +1,5 @@
 # Use Docker Python application base image
-FROM samling/pythonbase
+FROM samling/docker-python-base
 
 # Add pyapp
 ADD pyapp/ /app
@@ -11,7 +11,7 @@ RUN chown -R root /app
 ENV LD_LIBRARY_PATH $HOME/anaconda/lib
 
 #RUN apt-get install -y libffi-dev python-dev
-RUN apt-get install -y libffi-dev libxml2-dev libxslt1-dev python-dev
+RUN apt-get install -y libffi-dev libxml2-dev libxslt1-dev
 
 # Install requirements via pip
 RUN pip install -r /app/requirements.txt
