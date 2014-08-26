@@ -20,3 +20,9 @@ Build the image:
 Run the image:
 
     docker run -t xsscrapy url=http://example.com
+
+(Optional) Save the output:
+
+    docker cp stoic_jones:/app/formatted-vulns.txt .
+
+Run the above command from any directory to copy the output file to that directory.
