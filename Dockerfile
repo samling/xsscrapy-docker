@@ -10,6 +10,9 @@ RUN chown -R root /app
 # Fix for cryptography library installation via pip
 ENV LD_LIBRARY_PATH $HOME/anaconda/lib
 
+#get apt packages 
+RUN apt-get update
+
 # Install missing dependencies prior to installing requirements.txt
 RUN apt-get install -y libffi-dev libxml2-dev libxslt1-dev
 
